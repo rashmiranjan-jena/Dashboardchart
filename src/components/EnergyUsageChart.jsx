@@ -3,11 +3,11 @@ import { Line } from 'react-chartjs-2';
 
 const EnergyUsageChart = () => {
   const data = {
-    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+    labels: ['Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     datasets: [
       {
-        label: 'Energy Usage (kWh)',
-        data: [250, 200, 220, 230, 240, 260, 270],
+        label: 'Energy Usage',
+        data: [65, 59, 80, 81, 56, 55, 40],
         fill: false,
         backgroundColor: 'blue',
         borderColor: 'blue',
@@ -16,6 +16,7 @@ const EnergyUsageChart = () => {
   };
 
   const options = {
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true,

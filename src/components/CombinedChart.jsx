@@ -7,10 +7,21 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const ChartWrapper = styled.div`
-  width: 50%;
+  flex: 1 1 45%; 
+  max-width: 500px; 
+  height: 400px; 
+  margin: 20px; 
+  border: 2px solid #ddd; 
+  border-radius: 12px; 
+  background-color: #f4f4f4; 
+  position: relative;
+  padding: 20px; 
+  box-sizing: border-box; 
 `;
 
 const CombinedChart = () => {
@@ -35,6 +46,8 @@ const CombinedChart = () => {
   };
 
   const barOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true,
@@ -53,13 +66,18 @@ const CombinedChart = () => {
     ],
   };
 
+  const doughnutOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+  };
+
   return (
     <Container>
       <ChartWrapper>
         <Bar data={barData} options={barOptions} />
       </ChartWrapper>
       <ChartWrapper>
-        <Doughnut data={doughnutData} />
+        <Doughnut data={doughnutData} options={doughnutOptions} />
       </ChartWrapper>
     </Container>
   );

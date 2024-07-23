@@ -75,27 +75,30 @@ const Row = styled.div`
 `;
 
 const ChartWrapper = styled.div`
-  flex: 1 1 45%;
+  flex: 1 1 30%;
   margin: 10px;
-`;
+  width:300px;
+ 
+ `;
 
 const StatusContainer = styled.div`
   display: flex;
   justify-content: space-around;
+
 `;
 
 const App = () => (
   <Container>
-    <header>
-        <div className="logo">LUCID</div>
-        <input type="text" placeholder="Search here..." className="search-bar"/>
-        <div className="header-icons">
-          <i className="icon-calendar">📅</i>
-          <i className="icon-envelope">✉️</i>
-          <i className="icon-bell">🔔</i>
-          <i className="icon-settings">⚙️</i>
-        </div>
-      </header>
+     <header>
+  <div className="logo">LUCID</div>
+  <input type="text" placeholder="Search here..." className="search-bar"/>
+  <div className="header-icons">
+    <i className="icon-calendar">📅</i>
+    <i className="icon-envelope">✉️</i>
+    <i className="icon-bell">🔔</i>
+    <i className="icon-settings">⚙️</i>
+  </div>
+</header>
       <main>
         <div className="logo1">DASHBOARD</div>
          <div className="head">

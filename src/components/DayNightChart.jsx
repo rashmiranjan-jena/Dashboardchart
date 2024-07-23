@@ -1,5 +1,14 @@
 import React from 'react';
 import { Doughnut } from 'react-chartjs-2';
+import styled from 'styled-components';
+
+
+const ChartContainer = styled.div`
+  width: 150px; 
+  height: 150px; 
+  position: relative;
+`;
+
 
 const DayNightChart = () => {
   const data = {
@@ -13,7 +22,16 @@ const DayNightChart = () => {
     ],
   };
 
-  return <Doughnut data={data} />;
+  const options = {
+    maintainAspectRatio: false,
+    responsive: true,
+  };
+
+  return (
+    <ChartContainer>
+      <Doughnut data={data} options={options} />
+    </ChartContainer>
+  );
 };
 
 export default DayNightChart;
